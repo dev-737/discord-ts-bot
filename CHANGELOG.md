@@ -24,6 +24,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 ### Bug Fixes
-
+* Add event handler ([cdf034a](https://github.com/dev-737/discord-ts-bot/commit/cdf034a6a5f2b675adc7678821809d95d3bff136))
 * delete yarn.lock ([51e8bd7](https://github.com/dev-737/discord-ts-bot/commit/51e8bd744b4bc1054a0f8781ee90009a4b28282b))
 * Ignore yarn.lock ([53aa96f](https://github.com/dev-737/discord-ts-bot/commit/53aa96f584d031b5d957a22606172d54bc6b5029))

@@ -27,6 +27,7 @@ client.commands = new discord.Collection();
 client.version = require('../package.json').version;
 client.help = [];
 
+export {discord, client}
 
 fs.readdirSync(__dirname + '/commands').forEach((dir) => {  
 	if (fs.statSync(__dirname + `/commands/${dir}`).isDirectory()) {
@@ -58,24 +59,17 @@ fs.readdirSync(__dirname + '/commands').forEach((dir) => {
 });
 
 
+const eventFiles = fs.readdirSync(__dirname + '/events').filter((file) => file.endsWith('.js'));
 
-client.once('ready', () => {
-    console.log('Logged in as ' + client.user?.tag + '\nVersion: ' + client.version)
-});
+for (const eventFile of eventFiles) {
+	const event = require(__dirname + `/events/${eventFile}`);
 
-client.on('interactionCreate', async interaction => {
-    if (!interaction.isCommand()) return;
-
-    const command = interaction.client.commands.get(interaction.commandName);
-
-    if (!command) return console.log(interaction.client.commands);
-
-    try {
-        await command.execute(interaction)
-    }
-    catch {
-        console.error;
-    }
-});
+	if (event.once) {
+		client.once(event.name, (...args) => event.execute(...args, client));
+	}
+	else {
+		client.on(event.name, (...args) => event.execute(...args, client));
+	}
+}
 
 client.login(config.TOKEN)

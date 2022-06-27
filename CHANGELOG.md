@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/dev-737/discord-ts-bot/compare/v1.1.0...v1.2.0) (2022-06-27)
+
+
+### Features
+
+* Add message event and anti spam system WIP ([c445e0f](https://github.com/dev-737/discord-ts-bot/commit/c445e0f3113859356fedc1d389c6e608894512ec))
+
+
+### Bug Fixes
+
+* Move interaction event to file of its own ([e6bf372](https://github.com/dev-737/discord-ts-bot/commit/e6bf37254f629e43655cdc2de7a11a62ad96cd28))
+* Move ready event to a file of its own ([5d81087](https://github.com/dev-737/discord-ts-bot/commit/5d81087c6c664f48a664d091ebb3fbd6d3382a12))
+
 ## 1.1.0 (2022-06-26)
 
 

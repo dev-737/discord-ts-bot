@@ -6,7 +6,7 @@ Greetings! This is my first bot written in typescript. JavaScript is something I
 
 ## Bot Info:
 
-### Main File Structure:
+### File Structure:
 - [Source Folder](https://github.com/dev-737/discord-ts-bot/tree/main/src)
 - [Main File](https://github.com/dev-737/discord-ts-bot/blob/main/src/index.ts)
 - [Commands](https://github.com/dev-737/discord-ts-bot/tree/main/src/commands/)

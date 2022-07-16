@@ -39,9 +39,6 @@ fs.readdirSync(__dirname + '/commands').forEach((dir) => {
 			client.commands.set(command.data.name, command);
 		}
 
-		if (dir === 'private' || dir === 'Testing') return;
-
-
 		const cmds = commandFiles.map((command) => {
 			const file = (require(__dirname + `/commands/${dir}/${command}`));
 			if (!file.data.name) return 'No name';
